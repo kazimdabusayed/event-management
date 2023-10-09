@@ -1,8 +1,9 @@
+import Nav from "../../shared/Navber/Nav";
 
 const Home = () => {
     return (
         <div>
-            Home
+            <Nav></Nav>
         </div>
     );
 };
