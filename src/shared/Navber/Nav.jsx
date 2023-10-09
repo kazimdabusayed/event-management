@@ -6,6 +6,7 @@ import { AuthContext } from "../../providers/AuthProvider";
 const Nav = () => {
 
 	const { user, logOut } = useContext(AuthContext);
+	
 	const handleSignOut = () => {
 		logOut()
 		.then()
@@ -16,7 +17,6 @@ const Nav = () => {
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/about">About</NavLink></li>
         <li><NavLink to="/Profile">Profile</NavLink></li>
-        <li><NavLink to="/login">login</NavLink></li>
     </>
 
 	return (
@@ -41,7 +41,7 @@ const Nav = () => {
 					</label>
 					<ul
 						tabIndex={0}
-						className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+						className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-gradient-to-r from-purple-300 to-blue-400 rounded-box w-52"
 					>
 						{navLinks}
 					</ul>
@@ -49,28 +49,38 @@ const Nav = () => {
 				<a className="btn btn-ghost normal-case text-xl">daisyUI</a>
 			</div>
 			<div className="navbar-center hidden md:flex">
-				<ul className="menu menu-horizontal px-1 gap-2 text-lg font-semibold">{navLinks}</ul>
+				<ul className="menu menu-horizontal px-1 gap-2 text-lg font-semibold">
+					{navLinks}
+				</ul>
 			</div>
 			<div className="navbar-end">
-				<label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-					<div className="w-10 rounded-full">
-						<img src="" />
-					</div>
-				</label>
 				{user ? (
+					<>
+						<div className="text-xl text-indigo-700 font-semibold mr-2">
+							{user?.displayName}
+						</div>
+						<label
+							tabIndex={0}
+							className="btn btn-ghost btn-circle avatar mr-2"
+						>
+							<div className="w-11 rounded-full">
+								<img src={user?.photoURL} />
+							</div>
+						</label>
 						<button
-						onClick={handleSignOut}
-							className="btn btn-secondary btn-outline"
+							onClick={handleSignOut}
+							className="btn bg-gradient-to-r from-purple-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 text-white"
 						>
 							Log Out
 						</button>
-					) : (
-						<Link to="/login">
-							<button className="btn btn-secondary btn-outline">
-								Login
-							</button>
-						</Link>
-					)}
+					</>
+				) : (
+					<Link to="/login">
+						<button className="btn bg-gradient-to-r from-purple-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 text-white px-6 py-3">
+							Login
+						</button>
+					</Link>
+				)}
 			</div>
 		</div>
 	);

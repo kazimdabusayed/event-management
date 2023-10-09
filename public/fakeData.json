@@ -1,0 +1,52 @@
+[
+	{
+		"id": 1,
+		"name": "Tech Conferences and Expos",
+		"image": "https://i.ibb.co/wRpTYtF/Tech-Conferences-and-Expos.jpg",
+		"other-img": "https://i.ibb.co/R3mkLZY/Tech-Conferences-and-Expos01.jpg",
+		"price": "$199",
+		"description": "Join us for a series of tech conferences and expos featuring top industry speakers, interactive workshops, and the latest tech innovations. Explore the future of technology and network with like-minded professionals."
+	},
+	{
+		"id": 2,
+		"name": "Virtual Reality (VR) Experiences",
+		"image": "https://i.ibb.co/ZHcqBGr/Virtual-Reality-VR-Experiences.jpg",
+		"price": "$149",
+		"description": "Experience the future with our Virtual Reality (VR) Experiences. Dive into immersive worlds, try cutting-edge VR hardware, and interact with mind-blowing simulations. Perfect for VR enthusiasts and newcomers alike."
+	},
+	{
+		"id": 3,
+		"name": "Gaming and Tech Workshops",
+		"image": "https://i.ibb.co/jbjNXL0/Gaming-and-Tech-Workshops.jpg",
+		"price": "$49",
+		"description": "Enhance your gaming and tech skills with our hands-on workshops. Learn game development, coding, 3D modeling, and more from industry experts. Get ready to level up your skills."
+	},
+	{
+		"id": 4,
+		"name": "Hackathons",
+		"image": "https://i.ibb.co/M9R5d8y/hackathons-2.jpg",
+		"price": "Free",
+		"description": "Join our exhilarating hackathons and compete in a 24-hour coding challenge. Collaborate with fellow developers, engineers, and designers to build innovative solutions and win exciting prizes."
+	},
+	{
+		"id": 5,
+		"name": "Gaming Tournaments",
+		"image": "https://i.ibb.co/mS8YcsB/Gaming-Tournaments.jpg",
+		"price": "$50",
+		"description": "Get your game face on and compete in our thrilling Gaming Tournaments. Battle it out against top gamers for glory, bragging rights, and cash prizes. Show your skills and rise to the top."
+	},
+	{
+		"id": 6,
+		"name": "Game Development Conferences",
+		"image": "https://i.ibb.co/vLBKqcM/Game-Development-Conferences.jpg",
+		"price": "$249",
+		"description": "Game developers, unite! Join us at our Game Development Conferences to explore the latest trends, tools, and techniques in the world of game development. Connect with industry experts and level up your game."
+	},
+	{
+		"id": 7,
+		"name": "Tech and Gaming Awards Shows",
+		"image": "https://i.ibb.co/LJHz61T/award.webp",
+		"price": "$129",
+		"description": "Celebrate excellence in the tech and gaming industries at our prestigious Awards Shows. Witness outstanding achievements, innovation, and talent recognition in a glamorous evening of entertainment and recognition."
+	}
+]

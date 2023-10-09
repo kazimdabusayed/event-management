@@ -1,8 +1,8 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import Nav from "../../shared/Navber/Nav";
 import { FcGoogle } from "react-icons/fc";
 import { BsGithub } from "react-icons/bs";
-import { useContext } from "react";
+import { useContext, useState } from "react";
+import { BsEye, BsEyeSlash } from "react-icons/bs";
 import { AuthContext } from "../../providers/AuthProvider";
 
 
@@ -10,6 +10,7 @@ const Login = () => {
     const { signIn, googleSignIn, githubSignIn } = useContext(AuthContext);
 	const location = useLocation();
 	const navigate = useNavigate();
+	const [showPass, setShowPass] = useState(false);
 
     const handleLogIn = e =>{
         e.preventDefault();
@@ -34,6 +35,7 @@ const Login = () => {
 		e.preventDefault();
 		try {
 			await googleSignIn();
+			navigate(location?.state ? location.state : "/");
 		} catch (err) {
 			console.log(err.message);
 		}
@@ -43,6 +45,7 @@ const Login = () => {
 		e.preventDefault();
 		try {
 			await githubSignIn();
+			navigate(location?.state ? location.state : "/");
 		} catch (err) {
 			console.log(err.message);
 		}
@@ -50,11 +53,10 @@ const Login = () => {
 
     return (
 		<>
-			<Nav></Nav>
 			<div className="relative flex flex-col justify-center min-h-screen overflow-hidden">
-				<div className="w-full p-6 m-auto bg-white rounded-md lg:max-w-xl">
-					<h1 className="text-3xl font-semibold text-center text-purple-700 underline">
-						Login your account
+				<div className="w-full px-6 py-2 m-auto bg-white rounded-md lg:max-w-xl">
+					<h1 className="text-3xl font-semibold text-center text-purple-600 ">
+						Login to your account
 					</h1>
 					<form onSubmit={handleLogIn} className="mt-6">
 						<div className="mb-2">
@@ -78,11 +80,21 @@ const Login = () => {
 							>
 								Password
 							</label>
-							<input
-								type="password"
-								name="password"
-								className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border border-violet-400 rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
-							/>
+							<div className="relative">
+								<input
+									type={showPass ? "text" : "password"}
+									name="password"
+									id="password"
+									className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border border-violet-400 rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
+									required
+								/>
+								<span
+									onClick={() => setShowPass(!showPass)}
+									className="absolute text-gray-400 text-lg cursor-pointer top-3 right-3"
+								>
+									{showPass ? <BsEyeSlash /> : <BsEye />}
+								</span>
+							</div>
 						</div>
 						<a
 							href="#"
@@ -103,19 +115,22 @@ const Login = () => {
 						<button
 							type="button"
 							onClick={handleGoogleSignin}
-							className="flex items-center justify-center w-full p-2 border border-violet-500 rounded-md focus:ring-1 focus:ring-violet-700"
+							className="flex items-center justify-center w-full p-3 border border-violet-500 rounded-md focus:ring-1 focus:ring-violet-700"
 						>
 							<FcGoogle></FcGoogle>
+							<p className="ml-3">Google</p>
 						</button>
+
 						<button
 							type="button"
 							onClick={handleGithubSignin}
-							className="flex items-center justify-center w-full p-2 border border-violet-500 rounded-md focus:ring-1 focus:ring-violet-700"
+							className="flex items-center justify-center w-full p-3 border border-violet-500 rounded-md focus:ring-1 focus:ring-violet-700"
 						>
 							<BsGithub></BsGithub>
+							<p className="ml-3">GitHub</p>
 						</button>
 					</div>
-					<p className="mt-6 text-sm font-light text-center text-gray-700">
+					<p className="mt-6 text-base text-center text-gray-800">
 						{" "}
 						Don&apos;t have an account?{" "}
 						<Link

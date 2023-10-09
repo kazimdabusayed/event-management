@@ -2,10 +2,10 @@ import { createBrowserRouter } from "react-router-dom";
 import Root from "../layouts/Root";
 import Home from "../pages/Home/Home";
 import Register from "../pages/Register/Register";
-import Error from "../pages/Error/Error"
 import Login from "../pages/Login/Login";
 import Profile from "../pages/Profile/Profile";
 import PrivateRoute from "./PrivateRoute";
+import Error from "../pages/Error/Error";
 
 const router = createBrowserRouter([
 	{
@@ -16,6 +16,7 @@ const router = createBrowserRouter([
 			{
 				path: "/",
 				element: <Home />,
+				loader: () => fetch("/fakeData.json"),
 			},
 			{
 				path: "/register",

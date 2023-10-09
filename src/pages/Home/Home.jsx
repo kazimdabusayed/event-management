@@ -1,9 +1,11 @@
-import Nav from "../../shared/Navber/Nav";
+
+import Bennar from "../Banner/Bennar";
+
 
 const Home = () => {
     return (
         <div>
-            <Nav></Nav>
+            <Bennar></Bennar>
         </div>
     );
 };
