@@ -46,7 +46,9 @@ const Nav = () => {
 						{navLinks}
 					</ul>
 				</div>
-				<a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+				<a className="btn btn-ghost normal-case text-xl">
+					EventHub
+				</a>
 			</div>
 			<div className="navbar-center hidden md:flex">
 				<ul className="menu menu-horizontal px-1 gap-2 text-lg font-semibold">

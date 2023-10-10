@@ -6,6 +6,7 @@ import Login from "../pages/Login/Login";
 import Profile from "../pages/Profile/Profile";
 import PrivateRoute from "./PrivateRoute";
 import Error from "../pages/Error/Error";
+import Event from "../pages/Event/Event";
 
 const router = createBrowserRouter([
 	{
@@ -17,6 +18,14 @@ const router = createBrowserRouter([
 				path: "/",
 				element: <Home />,
 				loader: () => fetch("/fakeData.json"),
+			},
+			{
+				path: "/events/:id",
+				element: (
+					<PrivateRoute>
+						<Event />
+					</PrivateRoute>
+				),
 			},
 			{
 				path: "/register",

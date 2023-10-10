@@ -5,15 +5,21 @@ const Bennar = () => {
 		<div className="hero min-h-screen bg-base-200">
 			<div className="hero-content flex-col lg:flex-row-reverse">
 				<img
-					src="/images/stock/photo-1635805737707-575885ab0820.jpg"
-					className="max-w-sm rounded-lg shadow-2xl"
+					src="https://i.ibb.co/wRpTYtF/Tech-Conferences-and-Expos.jpg"
+					className="shadow-2xl"
 				/>
 				<div>
-					<h1 className="text-5xl font-bold">Box Office News!</h1>
+					<h1 className="text-5xl font-bold">
+						Welcome to the Ultimate Tech and Gaming Events Hub
+					</h1>
 					<p className="py-6">
-						Provident cupiditate voluptatem et in. Quaerat fugiat ut
-						assumenda excepturi exercitationem quasi. In deleniti
-						eaque aut repudiandae et a id nisi.
+						Explore the Future of Technology and Gaming Discover a
+						world where innovation meets entertainment. Dive into
+						immersive Virtual Reality experiences, sharpen your tech
+						skills in workshops, compete in thrilling gaming
+						tournaments, and celebrate excellence at awards shows.
+						Join us on a journey where tech enthusiasts and gamers
+						unite.
 					</p>
 					<button className="btn bg-gradient-to-r from-purple-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 text-white px-6 py-3 ">
 						Get Started
