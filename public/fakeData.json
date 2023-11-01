@@ -24,8 +24,8 @@
 	{
 		"id": 4,
 		"name": "Hackathons",
-		"image": "https://i.ibb.co/M9R5d8y/hackathons-2.jpg",
-		"price": "Free",
+		"image": "https://i.ibb.co/zsXgHPV/hack-ny-hackathon.jpg",
+		"price": "$129",
 		"description": "Join our exhilarating hackathons and compete in a 24-hour coding challenge. Collaborate with fellow developers, engineers, and designers to build innovative solutions and win exciting prizes."
 	},
 	{
@@ -46,7 +46,7 @@
 		"id": 7,
 		"name": "Tech and Gaming Awards Shows",
 		"image": "https://i.ibb.co/LJHz61T/award.webp",
-		"price": "$129",
+		"price": "Free",
 		"description": "Celebrate excellence in the tech and gaming industries at our prestigious Awards Shows. Witness outstanding achievements, innovation, and talent recognition in a glamorous evening of entertainment and recognition."
 	}
 ]

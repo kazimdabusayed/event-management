@@ -1,6 +1,4 @@
 import { Link, useNavigate } from "react-router-dom";
-import { FcGoogle } from "react-icons/fc";
-import { BsGithub } from "react-icons/bs";
 import { useContext, useState } from "react";
 import { BsEye, BsEyeSlash } from "react-icons/bs";
 import { AuthContext } from "../../providers/AuthProvider";
@@ -151,22 +149,6 @@ const Register = () => {
 					)}
 					{success && <p className="text-green-500">{success}</p>}
 
-					<div className="relative flex items-center justify-center w-full mt-6 border border-t border-gray-300">
-						<div className="absolute px-5 bg-white">Or</div>
-					</div>
-					<div className="flex mt-4 gap-x-2">
-						<button
-							type="button"
-							className="flex items-center justify-center w-full p-3 border border-violet-500 rounded-md focus:ring-1 focus:ring-violet-700"
-						>
-							<FcGoogle></FcGoogle>
-							<p className="ml-3">Google</p>
-						</button>
-						<button className="flex items-center justify-center w-full p-3 border border-violet-500 rounded-md focus:ring-1 focus:ring-violet-700">
-							<BsGithub></BsGithub>
-							<p className="ml-3">GitHub</p>
-						</button>
-					</div>
 					<p className="mt-6 text-base text-center text-gray-800">
 						{" "}
 						Already have an account?{" "}

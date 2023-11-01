@@ -6,7 +6,9 @@ import Login from "../pages/Login/Login";
 import Profile from "../pages/Profile/Profile";
 import PrivateRoute from "./PrivateRoute";
 import Error from "../pages/Error/Error";
-import Event from "../pages/Event/Event";
+import EventDetails from "../pages/Event/EventDetails";
+import About from "../components/About/About";
+import LatestNews from "../components/LatestNews/LatestNews";
 
 const router = createBrowserRouter([
 	{
@@ -20,12 +22,18 @@ const router = createBrowserRouter([
 				loader: () => fetch("/fakeData.json"),
 			},
 			{
+				path: "/",
+				element: <LatestNews/>,
+				loader: () => fetch("/latestNews.json"),
+			},
+			{
 				path: "/events/:id",
 				element: (
 					<PrivateRoute>
-						<Event />
+						<EventDetails />
 					</PrivateRoute>
 				),
+				loader: () => fetch("/fakeData.json"),
 			},
 			{
 				path: "/register",
@@ -34,6 +42,14 @@ const router = createBrowserRouter([
 			{
 				path: "/login",
 				element: <Login />,
+			},
+			{
+				path: "/about",
+				element: (
+					<PrivateRoute>
+						<About/>
+					</PrivateRoute>
+				),
 			},
 			{
 				path: "/profile",

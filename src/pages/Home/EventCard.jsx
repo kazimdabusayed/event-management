@@ -1,10 +1,15 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 
 const EventCard = ({events}) => {
-    const { id, name, image, price, description } = events ;
+    const { id, name, image, description } = events ;
     return (
-		<div className="block rounded-lg dark:bg-neutral-700 card max-w-sm md:max-w-lg mx-auto bg-base-100 shadow-xl">
+		<div
+			className="block rounded-lg dark:bg-neutral-700 card max-w-sm md:max-w-lg mx-auto bg-base-100 shadow-xl"
+			data-aos="fade-up"
+			data-aos-duration="1000"
+		>
 			<a href="#!">
 				<img className="rounded-t-lg" src={image} alt="" />
 			</a>
@@ -28,3 +33,7 @@ const EventCard = ({events}) => {
 };
 
 export default EventCard;
+
+EventCard.propTypes = {
+	events: PropTypes.node,
+};

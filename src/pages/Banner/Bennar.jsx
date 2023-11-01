@@ -1,6 +1,10 @@
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 
 
 const Bennar = () => {
+	const { user } = useContext(AuthContext);
     return (
 		<div className="hero min-h-screen bg-base-200">
 			<div className="hero-content flex-col lg:flex-row-reverse">
@@ -21,9 +25,16 @@ const Bennar = () => {
 						Join us on a journey where tech enthusiasts and gamers
 						unite.
 					</p>
-					<button className="btn bg-gradient-to-r from-purple-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 text-white px-6 py-3 ">
-						Get Started
-					</button>
+					{!user && (
+						<>
+							<Link
+								to="/register"
+								className="btn bg-gradient-to-r from-purple-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 text-white px-6 py-3 "
+							>
+								Get Started
+							</Link>
+						</>
+					)}
 				</div>
 			</div>
 		</div>

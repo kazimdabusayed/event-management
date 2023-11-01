@@ -2,6 +2,7 @@
 import { useLoaderData } from "react-router-dom";
 import Bennar from "../Banner/Bennar";
 import EventCard from "./EventCard";
+import LatestNews from "../../components/LatestNews/LatestNews";
 
 
 const Home = () => {
@@ -22,6 +23,7 @@ const Home = () => {
 					))}
 				</div>
 			</div>
+			<LatestNews></LatestNews>
 		</>
 	);
 };

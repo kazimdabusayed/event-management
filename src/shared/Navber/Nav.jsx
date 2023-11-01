@@ -16,7 +16,8 @@ const Nav = () => {
 	const navLinks = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/about">About</NavLink></li>
-        <li><NavLink to="/Profile">Profile</NavLink></li>
+        <li><NavLink to="/profile">Profile</NavLink></li>
+        <li><NavLink to="/latestnews">Profile</NavLink></li>
     </>
 
 	return (
@@ -46,7 +47,7 @@ const Nav = () => {
 						{navLinks}
 					</ul>
 				</div>
-				<a className="btn btn-ghost normal-case text-xl">
+				<a href="/" className="btn normal-case text-xl">
 					EventHub
 				</a>
 			</div>
@@ -58,7 +59,7 @@ const Nav = () => {
 			<div className="navbar-end">
 				{user ? (
 					<>
-						<div className="text-xl text-indigo-700 font-semibold mr-2">
+						<div className="text-xl text-indigo-700 font-semibold mr-2 hidden md:block">
 							{user?.displayName}
 						</div>
 						<label
